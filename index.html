@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean copia</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- FOGLIO DI STILE -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- HANDLEBARS -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+
+<body>
+    <header>
+        <i class="fab fa-spotify fa-3x"></i>
+    </header>
+    <main>
+        <select id="scelta-genere">
+            <option value= "">Seleziona un genere</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="jazz">Jazz</option>
+            <option value="metal">Metal</option>
+        </select>
+        <div id="dischi" class="flex-container">
+        </div>
+    </main>
+
+    <script id="disco-template" type="text/x-handlebars-template">
+        <div class="card-disco-container">
+            <div class="card-disco" data-genere="{{ genere }}">
+                <img class= "copertina "src="{{copertina}}" alt="">
+                <p class="titolo"><strong>{{titolo}}</strong></p>
+                <small class="artista">{{artista}}</small><br>
+                <small class="anno">{{anno}}</small>
+            </div>
+    </script>
+    <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
