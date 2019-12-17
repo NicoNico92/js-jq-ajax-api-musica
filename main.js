@@ -97,9 +97,10 @@ $(document).ready(function() {
         var genere_selezionato = $('#scelta-genere').val();
         console.log(genere_selezionato);
         //per ogni disco verifico se il suo genere corrisponde al genere genere_selezionato
-        if (genere_selezionato == '') {
-            $('card-disco').fadeIn();
-            $('card-disco').parent('.card-disco-container').fadeIn();
+        if (genere_selezionato == 'pippo') {
+            console.log('ciao');
+            $('.card-disco').fadeIn();
+            $('.card-disco').parent('.card-disco-container').fadeIn();
             //
         } else {
             //per ogni disco verifico se il suo genere corrisponde al genere selezionato
